@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app" style="color: red;background-color: gainsboro;">
+        <div class="header">
+            <span>我是header</span>
+        </div>
+        <div class="body">
+            <span>你好{{name}}，今年{{age}}岁，{{friends[0]}}，{{friends}}</span>
+        </div>
+        <div class="footer">
+            <span>我是footer</span>
+        </div>
+    </div>
+</body>
+<script src="./Vue.js"></script>
+<script>
+    const app = new Vue({
+        el:'#app',
+        data() {
+            return {
+                name: 'zs',
+                age: "18",
+                friends:[1,2,3],
+                school:{
+                    name:'林科大',
+                    age:10
+                }
+            }
+        },
+    })
+    console.log(app);
+    
+    setTimeout(() => {
+        app.friends.shift();
+        app.friends.push(100);
+        console.log(app);
+        
+    }, 2000);
+
+    // setTimeout(() => {
+    //     app.name="zs";
+    //     app.age=400;
+    //     app.school="中南林业科技大学"
+    // }, 5000);
+
+</script>
+</html>
