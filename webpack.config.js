@@ -2,7 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 /* Vue采用的是Rollup进行的打包 */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const {
+    CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 
 
 module.exports = {

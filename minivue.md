@@ -1,6 +1,6 @@
-#### vue 核心
+#### vue核心
 
-模版编译，虚拟 dom，响应式。
+模版编译，虚拟dom，响应式。
 
 生命周期的原理是什么？
 
@@ -13,7 +13,10 @@
 √ 3. 对数组实现数据劫持。
 √ 4. 模板编译原理，生成 AST 树。
 √ 5. 代码生成，实现虚拟 dom。
-√ 6. 虚拟 dom 转为真实 dom。 7. diff 算法 8. watch，computed 9. 完整的响应式（watcher，dep，observe）(依赖收集、异步更新)
+√ 6. 虚拟 dom 转为真实 dom。
+7. diff 算法 
+8. watch，computed 
+9. 完整的响应式（watcher，dep，observe）(依赖收集、异步更新)
 
 #### 7 月 31 号
 
