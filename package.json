@@ -1,0 +1,26 @@
+{
+  "name": "minivue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "webpack server",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.3",
+    "ts-loader": "^9.4.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.0.2",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "nanoid": "^4.0.2"
+  }
+}

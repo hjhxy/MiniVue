@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app" style="color: red; background-color: gainsboro">
+      <div class="header">
+        <span>我是header</span>
+      </div>
+      <div class="body">
+        <span>全名叫做{{name}},{{firstName}}</span>
+      </div>
+      <div class="footer">
+        <span>我是footer</span>
+      </div>
+    </div>
+  </body>
+  <script src="./Vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data() {
+        return {
+          name: "zs",
+          age: "18",
+          friends: [1, 2, 3],
+          school: {
+            name: "林科大",
+            age: 10,
+          },
+          firstName: "曾",
+          lastName: "小玉",
+        };
+      },
+      // computed: {
+      //   fullName() {
+      //     console.log("computed run", this.firstName + this.lastName);
+      //     return this.firstName + this.lastName;
+      //   },
+      // },
+      watch: {
+        name(newval, oldval) {
+          this.firstName = "约翰*";
+          console.log("watch", this);
+        },
+      },
+    });
+    console.log(app);
+
+    setTimeout(() => {
+      //为什么视图没有使用到firstname，修改firstname依然会造成更新？
+      /* 1. 视图读取了计算属性触发了getter方法，进而触发属性的getter，导致属性收集视图watcher
+        整个过程虽然计算属性没有收集watcher，只是充当中间人。
+      */
+      app.firstName = "刘";
+      // app.name = "ls";
+    }, 2000);
+  </script>
+</html>
